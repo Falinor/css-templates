@@ -1,0 +1,52 @@
+@import '../variables';
+
+.mti-divider {
+  width: 50%;
+  margin-left: 25%;
+  height: 1px;
+  background-color: $color-grey-neutral;
+}
+
+.mti-section {
+  min-height: 400px;
+  padding: 32px 0;
+}
+
+#mti {
+  position: relative;
+  padding: 0;
+  background: url(/images/technology.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+
+  // Overlay
+  & > div {
+    background: rgba($color-secondary, 0.6);
+  }
+
+  h1 {
+    font-family: 'Monoton', cursive;
+    @include font(160px, 400, false);
+    line-height: 0.6;
+    color: $color-primary;
+
+    @include desktop {
+      font-size: 200px;
+    }
+  }
+
+  h2 {
+    @include font(32px, 400, true);
+    color: $color-white;
+  }
+}
+
+#program {
+
+}
+
+#projects {
+}
+
+#events {
+}

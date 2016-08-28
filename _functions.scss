@@ -1,0 +1,3 @@
+@function calc-width($cols: 4, $totalCols: 12, $spacing: 0px) {
+  @return calc((#{$cols} / #{$totalCols}) * 100% - 2 * #{$spacing});
+}

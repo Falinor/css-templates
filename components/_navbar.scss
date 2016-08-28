@@ -1,0 +1,54 @@
+@import '../variables';
+
+.mti-navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 70px;
+  z-index: 4;
+
+  transition: box-shadow 0.4s $animation-material-timing-function,
+              background-color 0.4s $animation-material-timing-function,
+              height 0.4s $animation-material-timing-function;
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    bottom: initial;
+    background-color: $color-secondary;
+    height: 50px;
+
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, $shadow-key-penumbra-opacity),
+    0 1px 10px 0 rgba(0, 0, 0, $shadow-ambient-shadow-opacity),
+    0 2px 4px -1px rgba(0, 0, 0, $shadow-key-umbra-opacity);
+  }
+}
+
+.mti-navbar__links {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  color: $color-white;
+
+  &-left {
+    display: flex;
+    flex-flow: row nowrap;
+    color: $color-primary;
+  }
+
+  &-right {
+  }
+}
+
+.mti-navbar__link {
+  display: inline-block;
+  margin: 0 20px;
+
+  & > a {
+    color: $color-white;
+  }
+}

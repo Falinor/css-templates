@@ -1,0 +1,29 @@
+@import '../variables';
+
+.mti-footer {
+  color: $color-white;
+}
+
+.mti-footer__big {
+  min-height: $footer-big-min-height;
+  background-color: $footer-bg-color-big;
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+.mti-footer__mini {
+  min-height: $footer-mini-min-height;
+  color: rgba($color-white, $color-opacity-hard);
+  background-color: $footer-bg-color-mini;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}

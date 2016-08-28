@@ -1,0 +1,87 @@
+/**
+** Content
+**
+** COLORS
+**
+*/
+
+/**
+** Animation
+*/
+$animation-material-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+
+
+/**
+** Colors
+*/
+$color-primary: #ff974f;
+$color-primary-dark: #f54f29;
+$color-primary-light: #ffd393;
+
+$color-secondary: #405952;
+$color-secondary-light: #9c9b7a;
+
+$color-terminal: #1c1c1c;
+
+$color-white: #fff;
+$color-black: #000;
+$color-grey-neutral: #eee;
+
+$color-opacity-base: 0.87;
+$color-opacity-hard: 0.54;
+
+
+/**
+** Button
+*/
+$button-color-raised-default: $color-grey-neutral;
+$button-color-raised-default-active: darken($button-color-raised-default, 10%);
+$button-color-primary: $color-primary;
+$button-color-primary-active: lighten($button-color-primary, 10%);
+$button-color-primary-dark: $color-primary-dark;
+$button-color-primary-dark-active: lighten($button-color-primary-dark, 10%);
+$button-color-secondary: $color-secondary;
+$button-color-secondary-active: lighten($button-color-secondary, 10%);
+
+
+/**
+** Footer
+*/
+$footer-bg-color-big: #404040;
+$footer-bg-color-mini: #212121;
+$footer-big-min-height: 200px;
+$footer-mini-min-height: 50px;
+
+
+/**
+** Grid
+*/
+$grid-breakpoint-phone: 320px;
+$grid-breakpoint-tablet: 768px;
+$grid-breakpoint-desktop: 1280px;
+$grid-breakpoint-desktop-large: 1600px;
+
+$grid-phone-columns: 4;
+$grid-tablet-columns: 8;
+$grid-desktop-columns: 12;
+
+$grid-spacing: 8px;
+
+
+/**
+** Shadows
+*/
+$shadow-key-umbra-opacity: 0.2;
+$shadow-key-penumbra-opacity: 0.14;
+$shadow-ambient-shadow-opacity: 0.12;
+
+
+/**
+** Typography
+*/
+$typo-display-4: 56px;
+$typo-display-3: 45px;
+$typo-display-2: 34px;
+$typo-display-1: 24px;
+$typo-body-1: 18px;
+$typo-body-1-phone: 16px;

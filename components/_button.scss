@@ -1,0 +1,63 @@
+@import '../variables';
+@import '../mixins';
+
+
+.mti-btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 2px;
+  color: $color-white;
+  background-color: transparent;
+  text-transform: uppercase;
+  font: {
+    size: 14px;
+    weight: 500;
+  }
+
+  &:hover {
+    color: $color-white;
+  }
+
+  &:active {
+    background-color: rgba($color-black, $color-opacity-hard);
+  }
+}
+
+.mti-btn--raised {
+  @include shadow-2dp;
+  transition: box-shadow 0.4s $animation-material-timing-function;
+
+  &:hover {
+    @include shadow-8dp;
+  }
+
+  &:active {
+    @include shadow-4dp;
+  }
+}
+
+.mti-btn--primary {
+  background-color: $button-color-primary;
+
+  &:active {
+    background-color: $button-color-primary-active;
+  }
+}
+
+.mti-btn--primary-dark {
+  background-color: $button-color-primary-dark;
+
+  &:active {
+    background-color: $button-color-primary-dark-active;
+  }
+}
+
+.mti-btn--secondary {
+  background-color: $button-color-secondary;
+}
+
+.mti-btn--terminal {
+  font-family: 'Monaco', monospace;
+  background-color: $color-terminal;
+}

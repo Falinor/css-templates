@@ -1,0 +1,212 @@
+@import 'variables';
+@import 'mixins';
+
+
+/**
+** Grid root component
+*/
+.mti-grid {
+  display: flex;
+  flex-flow: row wrap;
+
+  @include tablet {
+    padding: 0 16px;
+  }
+
+  @include desktop {
+    padding: 0 32px;
+  }
+
+  &--full-height {
+    height: 100%;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+}
+
+
+/**
+** Cell root component
+*/
+.mti-cell {
+  margin: $grid-spacing;
+
+  .mti-grid--no-spacing & {
+    margin: 0;
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--text-center {
+    text-align: center;
+  }
+
+  &--stretch {
+    align-self: stretch;
+  }
+
+  &--top {
+    align-self: flex-start;
+  }
+
+  &--center {
+    align-self: center;
+  }
+
+  &--bottom {
+    align-self: flex-end;
+  }
+
+  &--hide-phone {
+    @include phone
+  }
+}
+
+
+/**
+** Phone-specific grid definition
+*/
+@include phone {
+  @for $i from 1 through $grid-phone-columns {
+    .mti-cell--#{$i}-col-phone {
+      @include grid-width($i, $grid-phone-columns, $grid-spacing);
+
+      .mti-grid--no-spacing & {
+        @include grid-width($i, $grid-phone-columns, $grid-spacing);
+      }
+    }
+  }
+
+  @for $i from 1 through $grid-phone-columns - 1 {
+    .mti-cell--#{$i}-offset-phone {
+      @include grid-margin($i, $grid-phone-columns, $grid-spacing);
+
+      .mti-grid--no-spacing & {
+        @include grid-margin($i, $grid-phone-columns);
+      }
+    }
+  }
+
+  .mti-cell--hide-phone {
+    @include visually-hide;
+  }
+}
+
+
+/**
+** Phone-specific retina grid definition
+*/
+@include phone-retina {
+  // TODO: implement
+}
+
+
+/**
+** Tablet-specific grid definition
+*/
+@include tablet {
+  @for $i from 1 through $grid-tablet-columns {
+    .mti-cell--#{$i}-col-tablet {
+      @include grid-width($i, $grid-tablet-columns, $grid-spacing);
+
+      .mti-grid--no-spacing & {
+        @include grid-width($i, $grid-tablet-columns, $grid-spacing);
+      }
+    }
+  }
+
+  /**
+  ** Tablet-specific margin definition
+  */
+  @for $i from 1 through $grid-tablet-columns - 1 {
+    .mti-cell--#{$i}-offset-tablet {
+      @include grid-margin($i, $grid-tablet-columns, $grid-spacing);
+
+      .mti-grid--no-spacing & {
+        @include grid-margin($i, $grid-tablet-columns);
+      }
+    }
+  }
+
+  .mti-cell--hide-tablet {
+    @include visually-hide;
+  }
+}
+
+
+/**
+** Default grid definition
+*/
+@for $i from 1 through $grid-desktop-columns {
+  .mti-cell--#{$i}-col {
+    @include grid-width($i, $grid-desktop-columns, $grid-spacing);
+
+    .mti-grid--no-spacing & {
+      @include grid-width($i, $grid-desktop-columns, $grid-spacing);
+    }
+  }
+
+  /**
+  ** Desktop-specific grid definition
+  */
+  @include desktop {
+    .mti-cell--#{$i}-col-desktop {
+      @include grid-width($i, $grid-desktop-columns, $grid-spacing);
+
+      .mti-grid--no-spacing & {
+        @include grid-width($i, $grid-desktop-columns, $grid-spacing);
+      }
+    }
+
+    .mti-cell--hide-desktop {
+      @include visually-hide;
+    }
+  }
+}
+
+
+/**
+** Default margin definition
+*/
+@for $i from 1 through $grid-desktop-columns - 1 {
+  .mti-cell--#{$i}-offset {
+    @include grid-margin($i, $grid-desktop-columns, $grid-spacing);
+
+    .mti-grid--no-spacing & {
+      @include grid-margin($i, $grid-desktop-columns);
+    }
+  }
+
+  /**
+  ** Desktop-specific margin definition
+  */
+  @include desktop {
+    .mti-cell--#{$i}-offset-desktop {
+      @include grid-margin($i, $grid-desktop-columns, $grid-spacing);
+
+      .mti-grid--no-spacing & {
+        @include grid-margin($i, $grid-desktop-columns);
+      }
+    }
+  }
+}
+
+
+/**
+** Tablet-specific retina grid definition
+*/
+@include tablet-retina {
+  // TODO: implement
+}
+
+
+/**
+** Desktop-specific retina grid definition
+*/
+@include desktop-retina {
+  // TODO: implement
+}
