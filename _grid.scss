@@ -8,6 +8,8 @@
 .mti-grid {
   display: flex;
   flex-flow: row wrap;
+  margin: 0 auto;
+  align-items: stretch;
 
   @include tablet {
     padding: 0 16px;
@@ -31,6 +33,7 @@
 ** Cell root component
 */
 .mti-cell {
+  box-sizing: border-box;
   margin: $grid-spacing;
 
   .mti-grid--no-spacing & {
@@ -112,6 +115,8 @@
   @for $i from 1 through $grid-tablet-columns {
     .mti-cell--#{$i}-col-tablet {
       @include grid-width($i, $grid-tablet-columns, $grid-spacing);
+      // Reset offset because of mobile-first design
+      margin-left: 0;
 
       .mti-grid--no-spacing & {
         @include grid-width($i, $grid-tablet-columns, $grid-spacing);
@@ -144,6 +149,8 @@
 @for $i from 1 through $grid-desktop-columns {
   .mti-cell--#{$i}-col {
     @include grid-width($i, $grid-desktop-columns, $grid-spacing);
+    // Reset offset because of mobile-first design
+    margin-left: 0;
 
     .mti-grid--no-spacing & {
       @include grid-width($i, $grid-desktop-columns, $grid-spacing);

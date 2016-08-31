@@ -79,9 +79,13 @@ $shadow-ambient-shadow-opacity: 0.12;
 /**
 ** Typography
 */
-$typo-display-4: 56px;
-$typo-display-3: 45px;
-$typo-display-2: 34px;
-$typo-display-1: 24px;
-$typo-body-1: 18px;
-$typo-body-1-phone: 16px;
+$typo-display-4: 52px;
+$typo-display-3: 41px;
+$typo-display-2: 28px;
+$typo-display-1: 20px;
+$typo-body-1: 16px;
+
+$typo-display-margin-phone: 8px;
+$typo-display-margin-tablet: $typo-display-margin-phone * 2;
+$typo-display-margin-desktop: $typo-display-margin-tablet * 2;
+$typo-display-margin-desktop-large: $typo-display-margin-desktop * 2;

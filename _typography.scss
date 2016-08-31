@@ -7,44 +7,8 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.45;
   color: rgba($color-black, $color-opacity-base);
-}
 
-h1, h2, h3, h4 {
-  font-family: 'Lora', serif;
-  margin: 24px 0;
-
-  small {
-    font-size: 0.4em;
-  }
-}
-
-h1 {
-  @include font($typo-display-4, 700, true);
-
-  @include desktop {
-    @include font($typo-display-4, 700, true);
-  }
-
-  @include desktop-large {
-    @include font($typo-display-4, 700, true);
-  }
-}
-
-h2 {
-  @include font($typo-display-3, 700, true);
-}
-
-h3 {
-  @include font($typo-display-2, 700, true);
-}
-
-h4 {
-  @include font($typo-display-1, 700, true);
-}
-
-p {
   @include font($typo-body-1, 300);
-  text-align: justify;
 
   @include desktop {
     @include font($typo-body-1 + 2, 300);
@@ -55,15 +19,83 @@ p {
   }
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+  margin: $typo-display-margin-phone 0;
+
+  small {
+    font-size: 0.4em;
+  }
+
+  @include tablet {
+    margin: $typo-display-margin-tablet 0;
+  }
+
+  @include desktop {
+    margin: $typo-display-margin-desktop 0;
+  }
+
+  @include desktop-large {
+    margin: $typo-display-margin-desktop-large 0;
+  }
+}
+
+h1 {
+  @include font($typo-display-4, 700, true);
+
+  @include desktop {
+    @include font($typo-display-4 + 2, 700, true);
+  }
+
+  @include desktop-large {
+    @include font($typo-display-4 + 4, 700, true);
+  }
+}
+
+h2 {
+  @include font($typo-display-3, 700, true);
+
+  @include desktop {
+    @include font($typo-display-3 + 2, 700, true);
+  }
+
+  @include desktop-large {
+    @include font($typo-display-3 + 4, 700, true);
+  }
+}
+
+h3 {
+  @include font($typo-display-2, 700, true);
+
+  @include desktop {
+    @include font($typo-display-2 + 2, 700, true);
+  }
+
+  @include desktop-large {
+    @include font($typo-display-2 + 4, 700, true);
+  }
+}
+
+h4 {
+  @include font($typo-display-1, 700, true);
+
+  @include desktop {
+    @include font($typo-display-1 + 2, 700, true);
+  }
+
+  @include desktop-large {
+    @include font($typo-display-1 + 4, 700, true);
+  }
+}
+
+p {
+  text-align: justify;
+}
+
 a {
-  @include font($typo-body-1, 300);
   color: $color-primary;
 
   &:hover {
     color: $color-primary-light;
   }
-}
-
-ul, li {
-  @include font($typo-body-1, 300);
 }
